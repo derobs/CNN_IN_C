@@ -155,8 +155,6 @@ struct matrix_constructor *element_by_element_dot(struct matrix_constructor *lef
 };
 
 struct matrix_constructor *flatten_matrix(struct matrix_constructor *matrix){
-    //we flatten it across the width because C access memory using row-major
-    //so the operation will take less memory accesses if we flatten row-major wise
     int needed_width = matrix->width * matrix->height;
     struct matrix_constructor *new_matrix = init_new_matrix(1, widthOfFlattenedMatrix);
     int cur = 0;
