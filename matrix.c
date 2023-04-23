@@ -156,7 +156,7 @@ struct matrix_constructor *element_by_element_dot(struct matrix_constructor *lef
 
 struct matrix_constructor *flatten_matrix(struct matrix_constructor *matrix){
     int needed_width = matrix->width * matrix->height;
-    struct matrix_constructor *new_matrix = init_new_matrix(1, widthOfFlattenedMatrix);
+    struct matrix_constructor *new_matrix = init_new_matrix(1, needed_width);
     int cur = 0;
     for(int i = 0; i < m->height; i++){
         for(int j = 0; j < m->width; j++){
